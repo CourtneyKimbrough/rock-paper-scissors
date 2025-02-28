@@ -59,20 +59,15 @@ function playRound(humanChoice, computerChoice){
     scoreDiv.textContent = "Score: Human - " + humanScore + " Computer - " + computerScore;
     
     if (humanScore > 4) {
-        const playAgain = prompt("Congrats! You win. Type Y to play again.")
-        if (playAgain === "Y") {
-            humanScore = 0;
-            computerScore = 0;
-            playGame();
-        }
+        resultsDiv.textContent = "You Won 5 times! Choose rock, paper or scissors to play again!";
+        humanScore = 0;
+        computerScore = 0;
     } else if (computerScore > 4) {
-        const playAgain = prompt("Sorry! You lose. Type Y to play again.")
-        if (playAgain === "Y") {
-            humanScore = 0;
-            computerScore = 0;
-            playGame();
+        resultsDiv.textContent = "Computer Won 5 times! You lost. Choose rock, paper or scissors to play again!"
+        humanScore = 0;
+        computerScore = 0;
         }
-    } 
+    
 
 }
 
